@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Tax</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-- поле для вводу зарплати -->
+
+        <div class="input-field">
+            <div class="before-tax">
+                <div class="field">
+                    <div class="label-wrapper">
+                        <div class="label">Salary before tax :</div>
+                    </div>
+                    <input type="text" id="before-tax" name="before-tax" value="" maxlength="16">
+                </div>
+            </div>
+        </div>
+
+        <!-- кінцевий результат -->
+
+        <div class="after-tax">
+            <div class="label-wrapper">
+                <div class="label">After tax :</div>
+                <div class="gryvna"><sup>₴</sup></div>
+            </div>
+            <span id="after-tax">0</span>
+        </div>
+
+        <!-- радіо кнопки за варіантами налогу -->
+
+        <div class="container">
+            <div class="taxes">
+                <div class="personal_income_tax">
+                    <input type="radio" name="tax" value="18%" id="personal_income_tax"> 
+                    <label for="personal_income_tax">18%</label>
+                </div>
+                <div class="military_tax">
+                    <input type="radio" name="tax" value="1.5%" id="military_tax"> 
+                    <label for="military_tax">1.5%</label>
+                </div>
+                <div class="unified_social_tax">
+                    <input type="radio" name="tax" value="22%" id="unified_social_tax"> 
+                    <label for="unified_social_tax">22%</label>
+                </div>
+                <div class="all_taxes">
+                    <input type="radio" name="tax" value="41.5%" id="all_taxes"> 
+                    <label for="all_taxes">41.5%</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- кнопка, яка рахує -->
+
+        <div class="button-wrapper">
+            <button id="Calculate">Calculate</button>
+        </div>
+
+    </div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
